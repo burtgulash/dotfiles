@@ -1,0 +1,48 @@
+[ui]
+username = TM
+
+[color]
+mode = auto
+lol.rev = yellow
+lol.author = cyan
+lol.book = red
+lol.time = green
+
+[alias]
+diff = diff --git
+addremove = addremove --similarity 100 # detect renames
+slog = log -G --template "{label('lol.rev', rev)}:{label('lol.book', bookmarks)} {desc|strip|firstline}({label('lol.time', date|age)}) <{label('lol.author', author|user)}>\n"
+log = log -G --stat
+
+[extensions]
+color = 
+pager = 
+largefiles = 
+rebase = 
+mq =
+shelve =
+purge =
+bookmarks =
+hgext.extdiff =
+graphlog =
+transplant = 
+progress =
+
+# [extdiff]
+# cmd.icdiff = 
+
+[pager]
+pager=most
+attend=diff, log, slog
+
+[largefiles]
+patterns = *.pdf *.xls *.xlsx
+
+[merge-tools]
+meld.args = $base $local $other -o $output
+
+[bookmarks]
+track.current = True
+
+[trusted]
+users = root
