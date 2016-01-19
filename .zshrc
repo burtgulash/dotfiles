@@ -40,3 +40,4 @@ export LANG=cs_CZ.UTF-8
 export EDITOR='vim'
 
 set -o vi
+alias xsel='xclip -sel clip'
