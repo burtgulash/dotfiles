@@ -20,8 +20,6 @@ set expandtab
 set t_Co=256
 
 
-
-
 " vimrc local
 
 set nocompatible              " be iMproved, required
@@ -38,7 +36,6 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Shougo/unite.vim'
 " Plugin 'mileszs/ack.vim'
 Plugin 'JuliaLang/julia-vim'
 Plugin 'fatih/vim-go'
@@ -49,9 +46,6 @@ Plugin 'leafgarland/typescript-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-
-
 
 
 
