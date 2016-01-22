@@ -2,6 +2,7 @@
 
 echo "Installing apps..."
 sudo apt-get install vim
+sudo apt-get install ack-grep
 
 read -p "Install python3? (y/N)" -n 1 -r
 echo
