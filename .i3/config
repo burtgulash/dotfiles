@@ -1,6 +1,6 @@
 set $mod Mod1
 
-font pango:DejaVu Sans Mono 10
+font pango:DejaVu Sans Mono 11
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -123,7 +123,7 @@ new_window pixel 1
 set $bg-color               $70828e
 set $urgent-bg-color        $70828e
 set $text-color             $e3e4e5
-set $inactive-text-color    $676e7d
+set $inactive-text-color    $a7aebd
 set $green                  $00ff00
 
 # class                   border    background   text         indicator
@@ -144,3 +144,5 @@ bar {
             urgent_workspace   $urgent-bg-color  $urgent-bg-color  $text-color
         }
 }
+
+exec xset r rate 250 60
