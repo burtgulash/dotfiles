@@ -117,7 +117,7 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # border around new windows
-new_window pixel 1
+new_window pixel 2
 
 # colors
 set $bg-color               $70828e
