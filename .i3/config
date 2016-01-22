@@ -122,8 +122,8 @@ new_window pixel 1
 # colors
 set $bg-color               $70828e
 set $urgent-bg-color        $70828e
-set $text-color             $e3e4e5
-set $inactive-text-color    $a7aebd
+set $text-color             $ffffff
+set $inactive-text-color    $bbbbcc
 set $green                  $00ff00
 
 # class                   border    background   text         indicator
@@ -134,7 +134,8 @@ client.urgent             #e53935   #e53935      $text-colo   $green
 # status bar
 bar {
         position top
-        status_command i3status
+        status_command #i3status
+        status_command $HOME/.i3/conky_wrapper.sh
         colors {
             background $bg-color
             separator  $bg-color
