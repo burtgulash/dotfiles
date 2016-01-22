@@ -5,6 +5,7 @@ sudo apt-get install vim
 sudo apt-get install ack-grep
 
 sudo apt-get install i3 i3status i3lock
+sudo apt-get install conky
 
 sudo apt-get install smplayer
 sudo apt-get install gpicview
