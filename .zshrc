@@ -41,3 +41,4 @@ export EDITOR='vim'
 
 set -o vi
 alias xsel='xclip -sel clip'
+setxkbmap cz dvorak-ucw
