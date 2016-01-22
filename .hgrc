@@ -27,6 +27,7 @@ hgext.extdiff =
 graphlog =
 transplant = 
 progress =
+git =
 
 # [extdiff]
 # cmd.icdiff = 
