@@ -111,6 +111,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# i3lock
+bindsym $mod+x exec --no-startup-id i3lock
 
 # scratchpad
 bindsym $mod+Shift+minus move scratchpad
