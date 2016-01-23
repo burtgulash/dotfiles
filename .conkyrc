@@ -3,19 +3,17 @@ own_window no
 out_to_console yes
 background no
 max_text_width 0
-update_interval 1.0
+update_interval 2.0
 total_run_times 0
 short_units yes
 if_up_strictness address
 use_spacer left
 override_utf8_locale no
 cpu_avg_samples 1
-double_buffer yes
 
 TEXT
-[
-{"full_text": " uptime [$uptime_short] ", "color": "\#ffffff"},
-{"full_text": " NET"},
+[{"full_text": " uptime [$uptime_short] ", "color": "\#ffffff"},\
+{"full_text": " NET"},\
 {"full_text":
     ${if_up eth0}
         "[${addr eth0}] "
@@ -26,17 +24,16 @@ TEXT
     ${else}
         "disconnected "
     ${endif}
-},
-{"full_text": " CPU [${cpu}% $machine] ", "color": "\#ffffff"},
+},\
+{"full_text": " CPU [${cpu}% $machine] ", "color": "\#ffffff"},\
 {"full_text": " RAM [${memperc}% (${mem}) swap${swap}] ", "color":
-    ${if_match ${memperc}<90} "\#ffffff" ${else} "\#ff0000" ${endif}},
+    ${if_match ${memperc}<90} "\#ffffff" ${else} "\#ff0000" ${endif}},\
 {"full_text":
     ${if_existing /proc/sys/vm/laptop_mode 1}
         " BAT ${battery_percent BAT0}% "
     ${else}
         ""
     ${endif}
-},
-{"full_text": " VOL [${exec amixer get Master -M | grep -oP '\d*%' | head -n1}] ", "color": "\#ffffff"},
-{"full_text": " ${time %d.%m.%Y %H:%M}", "color": "\#ffffff"}
-],
+},\
+{"full_text": " VOL [${exec amixer get Master -M | grep -oP '\d*%' | head -n1}] ", "color": "\#ffffff"},\
+{"full_text": " ${time %d.%m.%Y %H:%M}", "color": "\#ffffff"}],
