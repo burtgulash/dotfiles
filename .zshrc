@@ -38,4 +38,6 @@ alias xsel='xclip -sel clip'
 alias ll='ls -alF'
 alias webserver="ip addr show | grep 'inet ' | grep -v '127.0.0.1'; python3 -m http.server"
 
+# keyboard settings
 setxkbmap cz dvorak-ucw
+xset r rate 250 60
