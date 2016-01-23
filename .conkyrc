@@ -10,6 +10,7 @@ if_up_strictness address
 use_spacer left
 override_utf8_locale no
 cpu_avg_samples 1
+double_buffer yes
 
 TEXT
 [
