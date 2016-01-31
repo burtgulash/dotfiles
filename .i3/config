@@ -122,11 +122,11 @@ bindsym $mod+minus scratchpad show
 new_window pixel 2
 
 # colors
-set $bg-color               $70828e
-set $urgent-bg-color        $70828e
-set $text-color             $ffffff
-set $inactive-text-color    $bbbbcc
-set $green                  $00ff00
+set $bg-color               #70828e
+set $urgent-bg-color        #70828e
+set $text-color             #ffffff
+set $inactive-text-color    #bbbbcc
+set $green                  #00ff00
 
 # class                   border    background   text         indicator
 client.focused            #ffffff   #faa928      $text-color  $green

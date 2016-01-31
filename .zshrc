@@ -44,6 +44,7 @@ xset r rate 310 60
 #export LANG=cs_CZ.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+xsetroot -solid "#70828e"
 
 xset -dpms
 xset s noblank
