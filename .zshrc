@@ -21,9 +21,7 @@ umask 022
 # variables
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
-export LANG=cs_CZ.UTF-8 # move to X
 export PAGER='less'
-
 if [ -x $(which vim) ]; then
     export EDITOR=$(which vim)
 else
@@ -40,4 +38,8 @@ alias webserver="ip addr show | grep 'inet ' | grep -v '127.0.0.1'; python3 -m h
 
 # keyboard settings
 setxkbmap cz dvorak-ucw
-xset r rate 250 60
+xset r rate 310 60
+
+# move to X
+#export LANG=cs_CZ.UTF-8
+export LANG=en_US.UTF-8
