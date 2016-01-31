@@ -35,18 +35,3 @@ set -o vi; bindkey -v
 alias xsel='xclip -sel clip'
 alias ll='ls -alF'
 alias webserver="ip addr show | grep 'inet ' | grep -v '127.0.0.1'; python3 -m http.server"
-
-# keyboard settings
-setxkbmap cz dvorak-ucw
-xset r rate 310 60
-
-# move to X
-#export LANG=cs_CZ.UTF-8
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-xsetroot -solid "#70828e"
-
-# screen saver off
-xset -dpms
-xset s noblank
-xset s off

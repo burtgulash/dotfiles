@@ -147,3 +147,19 @@ bar {
             urgent_workspace   $urgent-bg-color  $urgent-bg-color  $text-color
         }
 }
+
+# keyboard settings
+exec --no-startup-id setxkbmap cz dvorak-ucw
+exec --no-startup-id xset r rate 310 60
+
+#export LANG=cs_CZ.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# background color
+exec --no-startup-id xsetroot -solid "#70828e"
+
+# screen saver off
+exec --no-startup-id xset -dpms
+exec --no-startup-id xset s noblank
+exec --no-startup-id xset s off
