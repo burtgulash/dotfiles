@@ -13,7 +13,7 @@ cpu_avg_samples 1
 
 TEXT
 [{"full_text": " uptime [$uptime_short]", "color": "\#ffffff"},\
-{"full_text": " NET ${tcp_ping http://google.com:80}ms "},\
+{"full_text": " NET ${exec ping -c 1 www.google.cz | grep time= | awk '{print $8}' | cut -d= -f2}ms "},\
 {"full_text":
     ${if_up eth0}
         "[${addr eth0}]"
