@@ -45,6 +45,7 @@ xset r rate 310 60
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+# screen saver off
 xset -dpms
 xset s noblank
 xset s off
