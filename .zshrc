@@ -8,12 +8,13 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle mercurial
 antigen bundle hchbaw/opp.zsh
-antigen theme robbyrussell
+# antigen theme kardan
+antigen theme mrtazz
 antigen apply
 
 
 setopt noclobber
-setopt print_exit_value
+#setopt print_exit_value
 
 limit coredumpsize 0
 umask 022
