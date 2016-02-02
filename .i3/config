@@ -111,8 +111,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# i3lock
-bindsym $mod+x exec --no-startup-id i3lock
+# blurry i3lock
+bindsym $mod+x exec --no-startup-id "$HOME/.local/bin/blurry_i3lock.sh"
+exec --no-startup-id xautolock -time 15 -locker "$HOME/.local/bin/blurry_i3lock.sh" &
 
 # scratchpad
 bindsym $mod+Shift+minus move scratchpad

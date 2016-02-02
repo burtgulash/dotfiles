@@ -11,6 +11,9 @@ sudo apt-get install smplayer
 sudo apt-get install gpicview
 sudo apt-get install ranger caca-utils highlight atool poppler-utils mediainfo
 
+# For screen lock
+sudo apt-get install i3lock scrot imagemagick
+
 read -p "Install python3? (y/N)" -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
