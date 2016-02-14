@@ -1,6 +1,5 @@
 set showcmd		" Show (partial) command in status line.
 set showmatch	" Show matching brackets.
-set mouse=a		" Enable mouse usage (all modes)
 set hidden
 set smartindent
 set tabstop=4   " tab == 4 spaces
@@ -45,6 +44,8 @@ Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
 Plugin 'mileszs/ack.vim'
+Plugin 'rking/ag.vim'
+Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'digitaltoad/vim-jade.git'
 "Plugin 'vim-scripts/cmdalias.vim'
 "Plugin 'klen/python-mode'

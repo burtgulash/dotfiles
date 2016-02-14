@@ -21,6 +21,9 @@ TEXT
     ${if_up wlp5s0}
         "[${wireless_essid wlp5s0} ${addr wlp5s0}]"\
     ${else}
+    ${if_up wlp2s0}
+        "[${wireless_essid wlp2s0} ${addr wlp2s0}]"\
+    ${else}
     ${if_up mlan0}
         "[${wireless_essid mlan0} ${addr mlan0}]"\
     ${else}
@@ -35,8 +38,6 @@ TEXT
 }\
 ,{"full_text": " CPU [${cpu}% $machine]", "color": "\#ffffff"}\
 ,{"full_text": " RAM [${memperc}% swp ${swapperc}%]", "color": ${if_match ${memperc}<90} "\#ffffff" ${else} "\#ff0000" ${endif}}\
-,{"full_text":\
-${if_existing /proc/sys/vm/laptop_mode 0} "" ${else} " BAT [${battery_percent BAT1}%]" ${endif}
-}\
+,{"full_text": " BAT [${battery_short BAT0}]"}\
 ,{"full_text": " VOL [${exec amixer get Master -M | grep -oP '\d*%' | head -n1}]", "color": "\#ffffff"}\
 ,{"full_text": " ${time %d.%m.%Y %H:%M}", "color": "\#ffffff"}],

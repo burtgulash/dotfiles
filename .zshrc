@@ -12,8 +12,9 @@ antigen bundle hchbaw/opp.zsh
 antigen theme mrtazz
 antigen apply
 
+unsetopt correct_all
 
-setopt noclobber
+#setopt noclobber
 #setopt print_exit_value
 
 limit coredumpsize 0
