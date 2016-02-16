@@ -149,8 +149,12 @@ bar {
         }
 }
 
-bindsym $mod+F5 exec --no-startup-id xbacklight -dec 10 -time 10
-bindsym $mod+F6 exec --no-startup-id xbacklight -inc 10 -time 10
+bindsym $mod+F5 exec --no-startup-id xbacklight -dec 7 -time 10
+bindsym $mod+F6 exec --no-startup-id xbacklight -inc 7 -time 10
+
+bindsym $mod+F10 exec --no-startup-id amixer -D pulse sset Master toggle
+bindsym $mod+F11 exec --no-startup-id amixer -D pulse sset Master 5%-
+bindsym $mod+F12 exec --no-startup-id amixer -D pulse sset Master 5%+ unmute
 
 # keyboard settings
 exec --no-startup-id setxkbmap cz dvorak-ucw

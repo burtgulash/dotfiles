@@ -35,6 +35,7 @@ TEXT
     ${endif}
     ${endif}
     ${endif}
+    ${endif}
 }\
 ,{"full_text": " CPU [${cpu}% $machine]", "color": "\#ffffff"}\
 ,{"full_text": " RAM [${memperc}% swp ${swapperc}%]", "color": ${if_match ${memperc}<90} "\#ffffff" ${else} "\#ff0000" ${endif}}\

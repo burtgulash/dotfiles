@@ -12,6 +12,7 @@ set smartcase
 set scrolloff=10
 set ruler
 set laststatus=2
+set backspace=indent
 
 set t_Co=256
 syntax on

@@ -36,4 +36,7 @@ set -o vi; bindkey -v
 # aliases
 alias xsel='xclip -sel clip'
 alias ll='ls -alF'
-alias webserver="ip addr show | grep 'inet ' | grep -v '127.0.0.1'; python3 -m http.server"
+
+if [ -z $SSH_AUTH_SOCK ]; then
+    eval $(ssh-agent -s)
+fi
