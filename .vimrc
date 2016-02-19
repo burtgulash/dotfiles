@@ -1,36 +1,3 @@
-set showcmd		" Show (partial) command in status line.
-set showmatch	" Show matching brackets.
-set hidden
-set smartindent
-set tabstop=4   " tab == 4 spaces
-set shiftwidth=4
-set expandtab
-set viminfo=
-set incsearch   " Highlight when searching
-set ignorecase
-set smartcase
-set scrolloff=10
-set ruler
-set laststatus=2
-set backspace=indent
-
-set t_Co=256
-syntax on
-
-" remove trailing characters macro
-" NOTE:  = \<C-m> = Enter = Ctrl+v, Ctrl+m
-let @t=':%s/\s\s*$//g'
-
-" Upper case write-quitting
-cabbr W w
-cabbr Q q
-
-
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType make setlocal ts=8 sw=8
-
-
-
 " PLUGINS start
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -91,3 +58,37 @@ let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_theme = 'luna'
 " goimports
 let g:go_fmt_command = "goimports"
+
+
+
+set showcmd		" Show (partial) command in status line.
+set showmatch	" Show matching brackets.
+set hlsearch
+set hidden
+set smartindent
+set tabstop=4   " tab == 4 spaces
+set shiftwidth=4
+set expandtab
+set viminfo=
+set incsearch   " Highlight when searching
+set ignorecase
+set smartcase
+set scrolloff=10
+set ruler
+set laststatus=2
+set backspace=indent
+
+set t_Co=256
+syntax on
+
+let mapleader = "\<Space>"
+nnoremap <leader>t :%s/^\s\s*$//g<CR>
+nnoremap <leader><leader> V
+
+" Upper case write-quitting
+cabbr W w
+cabbr Q q
+
+
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType make setlocal ts=8 sw=8
