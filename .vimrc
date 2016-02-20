@@ -1,12 +1,9 @@
 " PLUGINS start
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
@@ -14,13 +11,13 @@ Plugin 'fatih/vim-go'
 Plugin 'mileszs/ack.vim'
 Plugin 'rking/ag.vim'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'altercation/vim-colors-solarized'
 "Plugin 'digitaltoad/vim-jade.git'
 "Plugin 'vim-scripts/cmdalias.vim'
 "Plugin 'klen/python-mode'
 "Plugin 'scrooloose/syntastic'
 "Plugin 'leafgarland/typescript-vim'
 
-" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 "PLUGINS END
@@ -78,9 +75,6 @@ set ruler
 set laststatus=2
 set backspace=indent
 
-set t_Co=256
-syntax on
-
 let mapleader = "\<Space>"
 nnoremap <leader>t :%s/^\s\s*$//g<CR>
 nnoremap <leader><leader> V
@@ -92,3 +86,11 @@ cabbr Q q
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType make setlocal ts=8 sw=8
+
+set t_Co=256
+let g:solarized_termcolors=256
+
+syntax enable
+set background=light
+set background=dark
+colorscheme solarized
