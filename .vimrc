@@ -76,7 +76,7 @@ set laststatus=2
 set backspace=indent
 
 let mapleader = "\<Space>"
-nnoremap <leader>t :%s/^\s\s*$//g<CR>
+nnoremap <leader>t :%s/\s\s*$//g<CR>
 nnoremap <leader><leader> V
 
 " Upper case write-quitting

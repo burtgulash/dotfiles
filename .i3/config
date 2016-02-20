@@ -134,9 +134,10 @@ client.focused            #ffffff   #faa928      $text-color  $green
 client.focused_inactive   #ffffff   #000000      $text-color  $green
 client.urgent             #e53935   #e53935      $text-colo   $green
 
-gaps inner 8
-gaps outer 2
+gaps inner 10
+gaps outer 0
 smart_gaps on
+smart_borders on
 
 # status bar
 bar {
