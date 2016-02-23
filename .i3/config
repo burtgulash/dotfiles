@@ -154,8 +154,8 @@ bar {
         }
 }
 
-bindsym $mod+F5 exec --no-startup-id xbacklight -dec 7 -time 10
-bindsym $mod+F6 exec --no-startup-id xbacklight -inc 7 -time 10
+bindsym $mod+F5 exec --no-startup-id xbacklight -dec 5 -time 10
+bindsym $mod+F6 exec --no-startup-id xbacklight -inc 5 -time 10
 
 bindsym $mod+F10 exec --no-startup-id amixer -D pulse sset Master toggle
 bindsym $mod+F11 exec --no-startup-id amixer -D pulse sset Master 5%-
