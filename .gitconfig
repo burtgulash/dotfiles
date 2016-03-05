@@ -7,7 +7,15 @@ backup = "!f() { git bundle create $1 --all; }; f"
 log = log --graph
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-d = diff --cached
+d = diff --cached --word-diff
+f = "!git ls-files | grep -i"
+lasttag= describe --tags --abbrev=0
+st = status -s
+co = checkout
+br = branch
+
+# Nice aliases here:
+# http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
 
 [push]
 default = simple # Safe option
