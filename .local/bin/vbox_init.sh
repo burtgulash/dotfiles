@@ -1,2 +1,2 @@
 #!/bin/sh
-modprobe vboxdrv vboxnetadp vboxnetflt vboxpci
+modprobe vboxdrv vboxnetadp vboxnetflt vboxpci vboxsf
