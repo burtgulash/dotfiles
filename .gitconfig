@@ -1,3 +1,7 @@
+[user]
+name = Io
+email = me@me.me
+
 [alias]
 backup = "!f() { git bundle create $1 --all; }; f"
 log = log --graph
