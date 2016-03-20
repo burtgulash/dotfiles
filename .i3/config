@@ -176,3 +176,5 @@ exec --no-startup-id xsetroot -solid "#70828e"
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s noblank
 exec --no-startup-id xset s off
+
+exec --no-startup-id xset m 1/1 4
