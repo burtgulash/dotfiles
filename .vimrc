@@ -12,6 +12,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'rking/ag.vim'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'rust-lang/rust.vim'
 "Plugin 'digitaltoad/vim-jade.git'
 "Plugin 'vim-scripts/cmdalias.vim'
 "Plugin 'klen/python-mode'
@@ -60,7 +61,7 @@ let g:go_fmt_command = "goimports"
 
 set showcmd		" Show (partial) command in status line.
 set showmatch	" Show matching brackets.
-set hlsearch
+set hlsearch!
 set hidden
 set smartindent
 set tabstop=4   " tab == 4 spaces

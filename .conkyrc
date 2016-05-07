@@ -41,4 +41,4 @@ TEXT
 ,{"full_text": " RAM [${memperc}% swp ${swapperc}%]", "color": ${if_match ${memperc}<90} "\#ffffff" ${else} "\#ff0000" ${endif}}\
 ,{"full_text": ${if_match ${battery_percent}==0}""${else}" BAT [${battery_short BAT0}]"${endif}}\
 ,{"full_text": " VOL [${exec $HOME/.local/bin/conky_volume.sh}]", "color": "\#ffffff"}\
-,{"full_text": " ${time %d.%m.%Y %H:%M}", "color": "\#ffffff"}],
+,{"full_text": " ${time %Y-%m-%dT%H:%M%z}", "color": "\#ffffff"}],
