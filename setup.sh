@@ -18,6 +18,7 @@ link .zshrc
 link .vimrc
 link .gitconfig
 link .hgrc
+link .conkyrc
 
 mkdir -p $HOME/.local/bin
 
