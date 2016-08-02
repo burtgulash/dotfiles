@@ -16,12 +16,15 @@ unsetopt correct_all
 
 #setopt noclobber
 #setopt print_exit_value
+setopt extendedglob
 
 limit coredumpsize 0
 umask 022
 
 # variables
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.local/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 export PAGER='less'
 if [ -x $(which vim) ]; then
@@ -37,7 +40,12 @@ set -o vi; bindkey -v
 alias xsel='xclip -sel clip'
 alias ll='ls -alF'
 alias pink='ping google.com 2>&1 | awk -F "time=" "{print $2}"'
+alias vless='vim -R -'
+alias j='jobs'
+alias completed='paplay --volume 35000 /usr/share/sounds/freedesktop/stereo/complete.oga'
 
 if [ -z $SSH_AUTH_SOCK ]; then
     eval $(ssh-agent -s)
 fi
+
+function sshx() { /usr/bin/ssh -t $@ "tmux attach || tmux new"; }

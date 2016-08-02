@@ -9,9 +9,9 @@ lol.book = red
 lol.time = green
 
 [alias]
-diff = diff --git
+diff = diff
 addremove = addremove --similarity 100 # detect renames
-slog = log -G --template "{label('lol.rev', rev)}:{label('lol.book', bookmarks)} {desc|strip|firstline}({label('lol.time', date|age)}) <{label('lol.author', author|user)}>\n"
+lg = log -G --template "{label('lol.rev', rev)}:{label('lol.book', bookmarks)} {desc|strip|firstline}({label('lol.time', date|age)}) <{label('lol.author', author|user)}>\n"
 log = log -G --stat
 
 [extensions]
@@ -27,14 +27,15 @@ hgext.extdiff =
 graphlog =
 transplant = 
 progress =
-git =
+hgext.bookmarks =
+hggit =
 
 # [extdiff]
 # cmd.icdiff = 
 
 [pager]
-pager=most
-attend=diff, log, slog
+pager=less
+attend=diff, log, lg
 
 [largefiles]
 patterns = *.pdf *.xls *.xlsx
