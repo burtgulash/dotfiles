@@ -28,6 +28,7 @@ graphlog =
 transplant = 
 progress =
 hgext.bookmarks =
+#hggit = !
 hggit =
 
 # [extdiff]
