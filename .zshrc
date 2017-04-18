@@ -27,6 +27,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:/usr/local/bin/site_perl"
+export PATH="$PATH:/home/io/.gem/ruby/2.3.0/bin"
 
 export PAGER='less'
 if [ -x $(which vim) ]; then
@@ -45,6 +46,7 @@ alias pink='ping google.com 2>&1 | awk -F "time=" "{print $2}"'
 alias vless='vim -R -'
 alias j='jobs'
 alias completed='paplay --volume 35000 /usr/share/sounds/freedesktop/stereo/complete.oga'
+alias ocaml='ledit ocaml'
 
 if [ -z $SSH_AUTH_SOCK ]; then
     eval $(ssh-agent -s)
