@@ -1,17 +1,3 @@
-# plugins
-if [ ! -d $HOME/.antigen ]; then
-    curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > .antigen.zsh
-fi
-source $HOME/.antigen.zsh
-
-antigen use oh-my-zsh
-antigen bundle git
-antigen bundle mercurial
-antigen bundle hchbaw/opp.zsh
-# antigen theme kardan
-antigen theme mrtazz
-antigen apply
-
 unsetopt correct_all
 
 #setopt noclobber
@@ -27,6 +13,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:/usr/local/bin/site_perl"
+export PATH="$PATH:/home/tom/.gem/ruby/2.4.0/bin"
 
 export PAGER='less'
 if [ -x $(which vim) ]; then
@@ -40,6 +27,7 @@ set -o vi; bindkey -v
 
 # aliases
 alias xsel='xclip -sel clip'
+alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias pink='ping google.com 2>&1 | awk -F "time=" "{print $2}"'
 alias vless='vim -R -'
@@ -63,3 +51,9 @@ man() {
     LESS_TERMCAP_us=$(printf "\e[1;32m") \
     man "$@"
 }
+
+HISTFILE=~/.zsh_history
+HISTSIZE=9999999
+SAVEHIST=$HISTSIZE
+
+set -k # prevent 'bad pattern'
