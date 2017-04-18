@@ -21,6 +21,9 @@ TEXT
     ${if_up enp5s3}\
         "[${addr enp5s3}]"\
     ${else}\
+    ${if_up enp0s3}\
+        "[${addr enp5s3}]"\
+    ${else}\
     ${if_up wlp5s0}\
         "[${wireless_essid wlp5s0} ${addr wlp5s0}]"\
     ${else}\

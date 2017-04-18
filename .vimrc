@@ -11,7 +11,13 @@ Plugin 'rking/ag.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'rust-lang/rust.vim'
 Plugin 'zah/nim.vim'
+Plugin 'idris-hackers/idris-vim'
 Plugin 'dleonard0/pony-vim-syntax'
+Plugin 'vim-scripts/haskell.vim'
+Plugin 'hylang/vim-hy'
+Plugin 'ElmCast/elm-vim'
+Plugin 'raichoo/purescript-vim'
+Plugin 'vmuriart/jq.vim'
 "Plugin 'klen/python-mode'
 
 call vundle#end()            " required
@@ -28,7 +34,7 @@ set shiftwidth=4
 set expandtab
 set viminfo=
 set incsearch   " Highlight when searching
-set ignorecase
+"set ignorecase
 set smartcase
 set scrolloff=10
 set ruler
