@@ -58,3 +58,9 @@ HISTSIZE=9999999
 SAVEHIST=$HISTSIZE
 
 set -k # prevent 'bad pattern'
+
+autoload -Uz promptinit
+promptinit
+
+prompt walters
+prompt off
