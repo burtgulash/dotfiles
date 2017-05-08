@@ -35,7 +35,7 @@ hggit =
 # cmd.icdiff = 
 
 [pager]
-pager=less
+pager=less -R
 attend=diff, log, lg
 
 [largefiles]
