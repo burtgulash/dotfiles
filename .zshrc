@@ -40,6 +40,7 @@ if [ -z $SSH_AUTH_SOCK ]; then
 fi
 
 function sshx() { /usr/bin/ssh -t $@ "tmux attach -d || tmux new"; }
+function moshx() { /usr/sbin/mosh $1 -- tmux attach -d }
 
 man() {
     env \
