@@ -30,3 +30,6 @@ for f in *; do
     ln -sf "$HOME/dotfiles/.local/bin/$f" "$HOME/.local/bin"
 done
 popd
+
+# Install Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
