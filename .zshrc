@@ -26,6 +26,9 @@ fi
 set -o vi; bindkey -v
 
 # aliases
+alias grep='grep --color=auto'
+alias vi='nvim'
+alias vim='nvim'
 alias xsel='xclip -sel clip'
 alias ls='ls --color=auto'
 alias ll='ls -alF'
@@ -64,4 +67,3 @@ autoload -Uz promptinit
 promptinit
 
 prompt walters
-prompt off

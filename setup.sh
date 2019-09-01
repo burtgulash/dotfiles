@@ -11,6 +11,9 @@ link() {
     ln -sb "$HOME/dotfiles/$1" .
 }
 
+mkdir -p $HOME/.config/nvim
+
+link .config/nvim/init.vim
 link .i3
 link .xinitrc
 link .zlogin
