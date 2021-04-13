@@ -1,3 +1,4 @@
+# setopts
 unsetopt CORRECT_ALL
 unsetopt CORRECT
 setopt EXTENDED_GLOB
@@ -9,12 +10,27 @@ setopt HIST_FIND_NO_DUPS
 setopt AUTOCD AUTOPUSHD PUSHD_IGNORE_DUPS
 unsetopt multios # stderr redirection doesn't work otherwise
 set +o nomatch
-
 #setopt noclobber
 #setopt print_exit_value
+#
+# vi keybindings. bindkeys -v for zsh
+set -o vi; bindkey -v
+
+# fzf
+source /usr/share/fzf/key-bindings.zsh
+
+cd_with_fzf() {
+    cd $HOME && cd "$(fd -t d -I | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)" && echo "$PWD"
+}
+
+bindkey -s '^h' 'cd_with_fzf^m'
+bindkey -r '\ec'
+bindkey '^f' fzf-cd-widget
+bindkey '^u' fzf-history-widget
 
 limit coredumpsize 0
 umask 022
+
 
 # variables
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
@@ -28,11 +44,6 @@ export EDITOR=/usr/bin/vi
 export EDITOR=/usr/bin/vim
 export EDITOR=/usr/bin/nvim
 
-#source ~/.asdf/asdf.sh
-
-# vi keybindings. bindkeys -v for zsh
-set -o vi; bindkey -v
-bindkey -s '^l' 'clear -x;tput cup 100 0;^M'
 
 # aliases
 alias hist='sort | uniq -c | sort -n'
@@ -64,11 +75,10 @@ fi
 #    man "$@"
 #}
 
+# history
 HISTFILE=~/.zsh_history
-HISTSIZE=9999999
 SAVEHIST=$HISTSIZE
-
-set -k # prevent 'bad pattern'
+HISTSIZE=9999
 
 # Prompt style
 autoload -Uz promptinit
@@ -81,16 +91,11 @@ prompt walters
 #compinit
 #source /usr/bin/aws_zsh_completer.sh
 
-# FASD
-eval "$(fasd --init auto)"
-alias v='f -e nvim'
-alias vv='f -ie nvim'
-alias jz='f -e jzcat'
-alias jzz='f -ie jzcat'
-
 # direnv
 eval "$(direnv hook zsh)"
 
+# GPG
+export GPG_TTY=$(tty)
+
 keychain ~/.ssh/id_rsa
 
-export GPG_TTY=$(tty)
