@@ -142,8 +142,9 @@ smart_borders on
 # status bar
 bar {
         position top
-        status_command #i3status
-        status_command $HOME/.i3/conky_wrapper.sh
+        status_command i3status
+        #status_command $HOME/.i3/conky_wrapper.sh
+		mode hide
         colors {
             background $bg-color
             separator  $bg-color
