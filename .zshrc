@@ -22,9 +22,10 @@ source /usr/share/fzf/key-bindings.zsh
 cd_with_fzf() {
     cd $HOME && cd "$(fd -t d -I | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)" && echo "$PWD"
 }
+[[ -z $(which fd) ]] || export FZF_DEFAULT_COMMAND='fd --type f -I'
 
-bindkey -s '^h' 'cd_with_fzf^m'
 bindkey -r '\ec'
+bindkey -s '^h' 'cd_with_fzf^m'
 bindkey '^f' fzf-cd-widget
 bindkey '^u' fzf-history-widget
 
