@@ -33,18 +33,6 @@ export EDITOR=/usr/bin/vi
 export EDITOR=/usr/bin/vim
 export EDITOR=/usr/bin/nvim
 
-# aliases
-alias hist='sort | uniq -c | sort -n'
-alias jqr='jq -C . | less -R'
-alias jupcon='jupyter qtconsole --style=monokai'
-alias grep='grep --color=auto'
-alias vi='nvim'
-alias vim='nvim'
-alias xsel='xclip -sel clip'
-alias ls='ls --color=auto'
-alias ll='ls -alF'
-alias d='dirs -v | head -12'
-
 # history
 shopt -s histappend
 shopt -s cmdhist
@@ -66,3 +54,15 @@ fi
 
 # keychair
 keychain ~/.ssh/id_rsa
+
+# aliases
+alias hist='sort | uniq -c | sort -n'
+alias jqr='jq -C . | less -R'
+alias jupcon='jupyter qtconsole --style=monokai'
+alias grep='grep --color=auto'
+alias vi='nvim'
+alias vim='nvim'
+alias xsel='xclip -sel clip'
+alias ls='ls --color=auto'
+alias ll='ls -alF'
+alias d='dirs -v | head -12'
