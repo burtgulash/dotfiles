@@ -43,7 +43,7 @@ augroup remember_folds
   autocmd BufWinEnter * silent! loadview
 augroup END
 
-for c in ["/", ",", " "]
+for c in ["/", ",", "<Space>"]
     exe "nnoremap ci".c." T".c."ct".c
     exe "nnoremap ca".c." F".c."cf".c
     exe "nnoremap vi".c." T".c."vt".c
