@@ -41,6 +41,14 @@ HISTFILE=~/.bash_history
 HISTSIZE=999
 HISTFILESIZE=9999
 
+# Avoid duplicates
+HISTCONTROL=ignoredups:erasedups
+# When the shell exits, append to the history file instead of overwriting it
+shopt -s histappend
+
+# After each command, append to the history file and reread it
+#PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
 # direnv
 eval "$(direnv hook bash)"
 
@@ -66,3 +74,9 @@ alias xsel='xclip -sel clip'
 alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias d='dirs -v | head -12'
+# completion
+# make tab cycle through commands after listing
+bind 'TAB:menu-complete'
+bind "set show-all-if-ambiguous on"
+bind "set completion-ignore-case on"
+bind "set menu-complete-display-prefix on"

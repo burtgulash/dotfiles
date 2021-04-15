@@ -1,4 +1,4 @@
-set showcmd             " Show (partial) command in status line.
+set showcmd     " Show (partial) command in status line.
 set showmatch   " Show matching brackets.
 set hlsearch!
 set hidden
@@ -12,6 +12,7 @@ set scrolloff=10
 set ruler
 set laststatus=2
 set backspace=indent
+set confirm
 
 let mapleader = "\<Space>"
 let maplocalleader = "\\"
@@ -21,11 +22,14 @@ nnoremap <leader><leader> V
 " Upper case write-quitting
 cabbr W w
 cabbr Q q
+cabbr Qa qa
 cabbr Bn bn
 cabbr Bp bp
 
 syntax enable
 filetype indent off
+
+highlight Folded ctermbg=black
 
 let g:loaded_python_provider = 0
 
