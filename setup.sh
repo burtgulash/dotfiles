@@ -22,6 +22,9 @@ link .vimrc
 link .gitconfig
 link .hgrc
 link .conkyrc
+link .bashrc
+link .bash_profile
+link .inputrc
 
 mkdir -p $HOME/.local/bin
 
@@ -33,6 +36,6 @@ for f in *; do
     ln -sf "$HOME/dotfiles/.local/bin/$f" "$HOME/.local/bin"
 done
 popd
-
-# Install Vundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+#
+## Install Vundle
+#git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
