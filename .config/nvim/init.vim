@@ -13,40 +13,37 @@ set ruler
 set laststatus=2
 set backspace=indent
 set confirm
-
+set clipboard=unnamedplus "Linux # Linux clipboard
+" leader
 let mapleader = "\<Space>"
 let maplocalleader = "\\"
 nnoremap <leader>t :%s/\s\s*$//g<CR>
 nnoremap <leader><leader> V
-
+" disable ex mode
+nnoremap Q <nop>
 " Upper case write-quitting
-cabbr W w
-cabbr Q q
+cabbr Wa wa
 cabbr Qa qa
 cabbr Bn bn
 cabbr Bp bp
-
 syntax enable
 filetype indent off
 
 highlight Folded ctermbg=black
 
 let g:loaded_python_provider = 0
-
 call plug#begin("~/.local/share/nvim/plugged")
 Plug 'bfrg/vim-jq'
 Plug 'kien/ctrlp.vim'
 Plug 'junegunn/vim-plug'
-Plug 'jpalardy/vim-slime'
+"Plug 'jpalardy/vim-slime'
 Plug 'rust-lang/rust.vim'
 call plug#end()
-
 augroup remember_folds
   autocmd!
   autocmd BufWinLeave * mkview
   autocmd BufWinEnter * silent! loadview
 augroup END
-
 for c in ["/", ",", "<Space>"]
     exe "nnoremap ci".c." T".c."ct".c
     exe "nnoremap ca".c." F".c."cf".c
