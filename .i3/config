@@ -1,4 +1,4 @@
-set $mod Mod1
+set $mod Mod4
 
 font pango:DejaVu Sans Mono 12
 
@@ -144,7 +144,7 @@ bar {
         position top
         status_command i3status
         #status_command $HOME/.i3/conky_wrapper.sh
-		mode hide
+		#mode hide
         colors {
             background $bg-color
             separator  $bg-color

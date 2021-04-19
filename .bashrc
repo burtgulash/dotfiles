@@ -12,13 +12,9 @@ export PS1="\`_status_\`\u@\h:\w\\$ "
 # fzf
 source /usr/share/fzf/key-bindings.bash
 
-cd_with_fzf() {
-    cd $HOME && cd "$(fd -t d -I | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)" && echo "$PWD"
-}
-[[ -z $(which fd) ]] || export FZF_DEFAULT_COMMAND='fd --type f -I'
-
-bind -m vi-command -x '"\C-h": cd_with_fzf'
-bind -m vi-insert -x '"\C-h": cd_with_fzf'
+# caps lock to esc
+# setxkbmap -option caps:enter
+xmodmap -e "keycode 66 = KP_Enter"
 
 
 # variables
