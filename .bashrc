@@ -74,6 +74,7 @@ alias xsel='xclip -sel clip'
 alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias d='dirs -v | head -12'
+
 # completion
 # make tab cycle through commands after listing
 bind 'TAB:menu-complete'
