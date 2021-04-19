@@ -20,10 +20,3 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo apt-get install python3
     sudo apt-get install python3-dev
 fi
-
-read -p "Install powerline fonts? (y/N)" -n 1 -r
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    git clone https://github.com/powerline/fonts.git /tmp/fonts
-    /tmp/fonts/install.sh
-fi

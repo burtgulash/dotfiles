@@ -1,28 +1,28 @@
-" PLUGINS start
-set nocompatible              " be iMproved, required
-filetype off                  " required
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'fatih/vim-go'
-Plugin 'rking/ag.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'rust-lang/rust.vim'
-Plugin 'zah/nim.vim'
-Plugin 'idris-hackers/idris-vim'
-Plugin 'dleonard0/pony-vim-syntax'
-Plugin 'vim-scripts/haskell.vim'
-Plugin 'hylang/vim-hy'
-Plugin 'ElmCast/elm-vim'
-Plugin 'raichoo/purescript-vim'
-Plugin 'vmuriart/jq.vim'
-"Plugin 'klen/python-mode'
-
-call vundle#end()            " required
-filetype plugin indent off    " required
-"PLUGINS END
+"" PLUGINS start
+"set nocompatible              " be iMproved, required
+"filetype off                  " required
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
+"
+"Plugin 'gmarik/Vundle.vim'
+"Plugin 'kien/ctrlp.vim'
+"Plugin 'fatih/vim-go'
+"Plugin 'rking/ag.vim'
+"Plugin 'altercation/vim-colors-solarized'
+"Plugin 'rust-lang/rust.vim'
+"Plugin 'zah/nim.vim'
+"Plugin 'idris-hackers/idris-vim'
+"Plugin 'dleonard0/pony-vim-syntax'
+"Plugin 'vim-scripts/haskell.vim'
+"Plugin 'hylang/vim-hy'
+"Plugin 'ElmCast/elm-vim'
+"Plugin 'raichoo/purescript-vim'
+"Plugin 'vmuriart/jq.vim'
+""Plugin 'klen/python-mode'
+"
+"call vundle#end()            " required
+"filetype plugin indent off    " required
+""PLUGINS END
 
 set showcmd		" Show (partial) command in status line.
 set showmatch	" Show matching brackets.
@@ -50,9 +50,9 @@ cabbr W w
 cabbr Q q
 cabbr X x
 
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType make setlocal ts=8 sw=8
-autocmd BufRead,BufNewFile *.coco set filetype=python
+"autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+"autocmd FileType make setlocal ts=8 sw=8
+"autocmd BufRead,BufNewFile *.coco set filetype=python
 
 set t_Co=256
 let g:solarized_termcolors=256
@@ -60,4 +60,4 @@ let g:solarized_termcolors=256
 syntax enable
 set background=light
 "set background=dark
-colorscheme solarized
+#colorscheme solarized

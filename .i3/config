@@ -1,6 +1,6 @@
 set $mod Mod1
 
-font pango:DejaVu Sans Mono 11
+font pango:DejaVu Sans Mono 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -142,8 +142,9 @@ smart_borders on
 # status bar
 bar {
         position top
-        status_command #i3status
-        status_command $HOME/.i3/conky_wrapper.sh
+        status_command i3status
+        #status_command $HOME/.i3/conky_wrapper.sh
+		mode hide
         colors {
             background $bg-color
             separator  $bg-color
