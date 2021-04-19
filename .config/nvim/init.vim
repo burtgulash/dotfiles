@@ -22,10 +22,13 @@ nnoremap <leader><leader> V
 " disable ex mode
 nnoremap Q <nop>
 " Upper case write-quitting
-cabbr Wa wa
-cabbr Qa qa
-cabbr Bn bn
-cabbr Bp bp
+command! Q :q
+command! Qa :qa
+command! W  :w
+command! Wa :wa
+command! Bp :bp
+command! Bn :bn
+
 syntax enable
 filetype indent off
 
