@@ -1,0 +1,1 @@
+/home/io/dotfiles/.i3

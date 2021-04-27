@@ -6,13 +6,15 @@ bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert  'Control-l: clear-screen'
 
 # ps1
-_status_() { test 0 -ne $? && echo "[$_] "; }
+_status_() { test 0 -ne $? && echo "$_ "; }
 export PS1="\`_status_\`\u@\h:\w\\$ "
 
-# fzf
+# fz
 source /usr/share/fzf/key-bindings.bash
 
 # caps lock to esc
+# disable caps first
+setxkbmap -option caps:escape
 # setxkbmap -option caps:enter
 xmodmap -e "keycode 66 = KP_Enter"
 
@@ -43,7 +45,8 @@ HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 
 # After each command, append to the history file and reread it
-#PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a"
+
 
 # direnv
 eval "$(direnv hook bash)"
@@ -80,3 +83,10 @@ bind "set menu-complete-display-prefix on"
 
 bind -m vi-command '"\C-x": edit-and-execute-command'
 bind -m vi-insert '"\C-x": edit-and-execute-command'
+
+# functions
+cr() {
+    xrandr 2>&1 | grep -Eo "([0-9]+x[0-9]+)" | sort -nur | fzf | xargs -I{} xrandr --output DVI-I-1 --mode {}
+}
+
+complete -C /usr/bin/mcli mcli

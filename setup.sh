@@ -8,7 +8,7 @@ fi
 
 link() {
     echo "Linking dotfile $1"
-    ln -sb "$HOME/dotfiles/$1" .
+    ln -sf "$HOME/dotfiles/$1" "$HOME/$1"
 }
 
 mkdir -p $HOME/.config/nvim
