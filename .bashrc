@@ -36,7 +36,7 @@ shopt -s histappend
 shopt -s cmdhist
 
 HISTFILE=~/.bash_history
-HISTSIZE=999
+HISTSIZE=9999
 HISTFILESIZE=9999
 
 # Avoid duplicates
@@ -80,6 +80,8 @@ bind 'TAB:menu-complete'
 bind "set show-all-if-ambiguous on"
 bind "set completion-ignore-case on"
 bind "set menu-complete-display-prefix on"
+bind "set completion-query-items -1"
+bind "set page-completions off"
 
 bind -m vi-command '"\C-x": edit-and-execute-command'
 bind -m vi-insert '"\C-x": edit-and-execute-command'
