@@ -20,6 +20,11 @@ cd_with_fzf() {
 bind -m vi-command -x '"\C-h": cd_with_fzf'
 bind -m vi-insert -x '"\C-h": cd_with_fzf'
 
+body() {
+    IFS= read -r header
+    printf "%s\n" "$header"
+    "$@"
+}
 
 # variables
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
