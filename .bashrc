@@ -6,19 +6,17 @@ bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert  'Control-l: clear-screen'
 
 # ps1
-_status_() { test 0 -ne $? && echo "[$_] "; }
+_status_() { test 0 -ne $? && echo "$_ "; }
 export PS1="\`_status_\`\u@\h:\w\\$ "
 
-# fzf
+# fz
 source /usr/share/fzf/key-bindings.bash
 
-cd_with_fzf() {
-    cd $HOME && cd "$(fd -t d -I | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)" && echo "$PWD"
-}
-[[ -z $(which fd) ]] || export FZF_DEFAULT_COMMAND='fd --type f -I'
-
-bind -m vi-command -x '"\C-h": cd_with_fzf'
-bind -m vi-insert -x '"\C-h": cd_with_fzf'
+# caps lock to esc
+# disable caps first
+setxkbmap -option caps:escape
+# setxkbmap -option caps:enter
+xmodmap -e "keycode 66 = KP_Enter"
 
 body() {
     IFS= read -r header
@@ -52,7 +50,8 @@ HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 
 # After each command, append to the history file and reread it
-#PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a"
+
 
 # direnv
 eval "$(direnv hook bash)"
@@ -79,6 +78,7 @@ alias xsel='xclip -sel clip'
 alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias d='dirs -v | head -12'
+
 # completion
 # make tab cycle through commands after listing
 bind 'TAB:menu-complete'
@@ -88,3 +88,10 @@ bind "set menu-complete-display-prefix on"
 
 bind -m vi-command '"\C-x": edit-and-execute-command'
 bind -m vi-insert '"\C-x": edit-and-execute-command'
+
+# functions
+cr() {
+    xrandr 2>&1 | grep -Eo "([0-9]+x[0-9]+)" | sort -nur | fzf | xargs -I{} xrandr --output DVI-I-1 --mode {}
+}
+
+complete -C /usr/bin/mcli mcli

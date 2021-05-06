@@ -100,3 +100,6 @@ export GPG_TTY=$(tty)
 
 keychain ~/.ssh/id_rsa
 
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/mcli mcli
