@@ -38,6 +38,7 @@ let g:loaded_python_provider = 0
 call plug#begin("~/.local/share/nvim/plugged")
 Plug 'bfrg/vim-jq'
 Plug 'kien/ctrlp.vim'
+Plug 'junegunn/vim-plug'
 Plug 'tpope/vim-surround'
 "Plug 'jpalardy/vim-slime'
 Plug 'rust-lang/rust.vim'

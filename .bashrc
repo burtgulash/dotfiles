@@ -18,6 +18,11 @@ setxkbmap -option caps:escape
 # setxkbmap -option caps:enter
 xmodmap -e "keycode 66 = KP_Enter"
 
+body() {
+    IFS= read -r header
+    printf "%s\n" "$header"
+    "$@"
+}
 
 # variables
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
