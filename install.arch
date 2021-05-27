@@ -1,0 +1,34 @@
+xorg-server
+xorg-xinit
+neovim
+chromium
+i3-gaps
+conky
+keychain
+dmenu
+i3blocks
+i3lock
+alsa
+pavucontrol
+git
+base-devel
+jq
+yq
+alsa-utils
+minio
+minio-client
+xclip
+clang
+rustup
+pip-tools
+htop
+
+# yay
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+
+#
+edit /etc/locale.gen
+sudo locale-gen
